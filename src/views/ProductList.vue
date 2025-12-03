@@ -11,22 +11,10 @@
       <div class="filter-section">
         <div class="filter-title">
           <div class="filter-title-group">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 20 20"
-              fill="none"
-              class="icon"
-            >
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="icon">
               <g clip-path="url(#clip0_2200_5624)">
-                <path
-                  d="M18.3332 2.5H1.6665L8.33317 10.3833V15.8333L11.6665 17.5V10.3833L18.3332 2.5Z"
-                  stroke="#FF813F"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
+                <path d="M18.3332 2.5H1.6665L8.33317 10.3833V15.8333L11.6665 17.5V10.3833L18.3332 2.5Z" stroke="#FF813F"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
               </g>
               <defs>
                 <clipPath id="clip0_2200_5624">
@@ -43,9 +31,9 @@
           <ul class="filter-list">
             <li>
               <label class="checkbox-container">
-                <input type="checkbox" value="Thức ăn" v-model="selectedCategories" />
+                <input type="checkbox" value="Thuc an" v-model="selectedCategories" />
                 <span class="checkmark"></span>
-                Thức ăn
+                Thuc an
               </label>
             </li>
             <li>
@@ -129,22 +117,8 @@
           <h3 class="filter-heading">Mức giá</h3>
           <div class="price-filter">
             <div class="slider-container">
-              <input
-                type="range"
-                :min="min"
-                :max="max"
-                v-model.number="minPrice"
-                @input="checkMin"
-                class="range-min"
-              />
-              <input
-                type="range"
-                :min="min"
-                :max="max"
-                v-model.number="maxPrice"
-                @input="checkMax"
-                class="range-max"
-              />
+              <input type="range" :min="min" :max="max" v-model.number="minPrice" @input="checkMin" class="range-min" />
+              <input type="range" :min="min" :max="max" v-model.number="maxPrice" @input="checkMax" class="range-max" />
               <div class="slider-track">
                 <div class="slider-range" :style="trackStyle"></div>
               </div>
@@ -171,13 +145,8 @@
               <span class="arrow" :class="{ rotated: dropdownOpen }">▼</span>
             </button>
             <div v-if="dropdownOpen" class="dropdown-menu">
-              <div
-                class="dropdown-item"
-                v-for="(option, index) in sortOptions"
-                :key="index"
-                @click="selectOption(option.value)"
-                :class="{ selected: sortOption === option.value }"
-              >
+              <div class="dropdown-item" v-for="(option, index) in sortOptions" :key="index"
+                @click="selectOption(option.value)" :class="{ selected: sortOption === option.value }">
                 {{ option.label }}
                 <span v-if="sortOption === option.value" class="checkmark-selected">✔</span>
               </div>
@@ -209,14 +178,9 @@
 
           <!-- Product Grid -->
           <div v-else class="product-grid">
-            <router-link
-              v-for="product in paginatedProducts"
-              :key="product.product_id"
-              :to="{ name: 'ProductDetail', params: { id: product.product_id } }"
-              class="product-card"
-              @mouseenter="setHoverProduct(product.product_id)"
-              @mouseleave="clearHoverProduct"
-            >
+            <router-link v-for="product in paginatedProducts" :key="product.product_id"
+              :to="{ name: 'ProductDetail', params: { id: product.product_id } }" class="product-card"
+              @mouseenter="setHoverProduct(product.product_id)" @mouseleave="clearHoverProduct">
               <div class="product-image-container">
                 <img :src="product.image_url" :alt="product.product_name" class="product-img" />
                 <div class="product-overlay">
@@ -227,11 +191,8 @@
                   <button class="overlay-btn buy-btn" @click.prevent="buyNow(product)">
                     Mua ngay
                   </button>
-                  <button
-                    class="overlay-btn favorite-btn"
-                    :class="{ active: product.isFavorite }"
-                    @click.prevent="toggleFavorite(product)"
-                  >
+                  <button class="overlay-btn favorite-btn" :class="{ active: product.isFavorite }"
+                    @click.prevent="toggleFavorite(product)">
                     <i :class="['fas', product.isFavorite ? 'fa-heart' : 'fa-heart-o']"></i>
                     {{ product.isFavorite ? 'Đã yêu thích' : 'Yêu thích' }}
                   </button>
@@ -250,11 +211,8 @@
                   <button class="overlay-btn buy-btn" @click.prevent="buyNow(product)">
                     Mua ngay
                   </button>
-                  <button
-                    class="overlay-btn favorite-btn"
-                    :class="{ active: product.isFavorite }"
-                    @click.prevent="toggleFavorite(product)"
-                  >
+                  <button class="overlay-btn favorite-btn" :class="{ active: product.isFavorite }"
+                    @click.prevent="toggleFavorite(product)">
                     <i :class="['fas', product.isFavorite ? 'fa-heart' : 'fa-heart-o']"></i>
                     {{ product.isFavorite ? 'Đã yêu thích' : 'Yêu thích' }}
                   </button>
@@ -275,13 +233,8 @@
               ◀ Trước
             </button>
 
-            <button
-              v-for="page in visiblePages"
-              :key="page"
-              @click="goToPage(page)"
-              :class="{ active: currentPage === page }"
-              class="page-btn"
-            >
+            <button v-for="page in visiblePages" :key="page" @click="goToPage(page)"
+              :class="{ active: currentPage === page }" class="page-btn">
               {{ page }}
             </button>
 
@@ -466,7 +419,7 @@ export default {
         console.error('Error with buy now:', error)
         alert(
           'Không thể mua ngay: ' +
-            (error.response?.data?.message || error.message || 'Lỗi không xác định')
+          (error.response?.data?.message || error.message || 'Lỗi không xác định')
         )
       } finally {
         this.cartLoading = false
@@ -677,16 +630,50 @@ export default {
     },
 
     visiblePages() {
-      const pages = []
-      const start = Math.max(1, this.currentPage - 2)
-      const end = Math.min(this.totalPages, this.currentPage + 2)
+  const pages = [];
 
-      for (let i = start; i <= end; i++) {
-        pages.push(i)
-      }
-
-      return pages
+  if (this.currentPage === 1) {
+    const end = Math.min(this.totalPages, this.currentPage + 3); 
+    for (let i = 1; i <= end; i++) {
+      pages.push(i);
     }
+    return pages;
+  }
+
+  if (this.currentPage === 2) {
+    const end = Math.min(this.totalPages, this.currentPage + 2); 
+    for (let i = 1; i <= end; i++) {
+      pages.push(i);
+    }
+    return pages;
+  }
+  
+  if (this.currentPage ===  this.totalPages - 1) {
+    const start = Math.max(1, this.currentPage - 2);
+    for (let i = start; i <= this.totalPages; i++) {
+      pages.push(i);
+    }
+    return pages;
+  }
+
+  if (this.currentPage === this.totalPages) {
+    const start = Math.max(1, this.currentPage - 3);
+    for (let i = start; i <= this.totalPages; i++) {
+      pages.push(i);
+    }
+    return pages;
+  }
+  // Các trang ở giữa → hiển thị: current - 1, current, current + 1
+  const start = this.currentPage - 2;
+  const end = this.currentPage + 2;
+
+  for (let i = start; i <= end; i++) {
+    pages.push(i);
+  }
+
+  return pages;
+}
+
   },
 
   watch: {
@@ -827,12 +814,12 @@ export default {
   transition: all 0.2s;
 }
 
-.checkbox-container input:checked + .checkmark {
+.checkbox-container input:checked+.checkmark {
   background-color: #ff813f;
   border-color: #ff813f;
 }
 
-.checkbox-container input:checked + .checkmark::after {
+.checkbox-container input:checked+.checkmark::after {
   content: '✓';
   position: absolute;
   color: white;
@@ -1317,6 +1304,7 @@ input[type='range']::-webkit-slider-thumb {
 
 /* Accessibility */
 @media (prefers-reduced-motion: reduce) {
+
   .product-card,
   .product-card:hover .product-img {
     animation: none;
@@ -1334,6 +1322,7 @@ input[type='range']::-webkit-slider-thumb {
 
 /* Print styles */
 @media print {
+
   .filter-section,
   .sort-wrapper,
   .pagination {
