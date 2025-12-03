@@ -22,6 +22,27 @@
               About us
             </router-link>
           </li>
+
+          <li>
+            <a href="https://www.facebook.com/"
+              class="text-[#222] hover:text-[#ff9000] transition-all">
+              Facebook
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.youtube.com/watch?v=Z0W_LeF44f8&list=RDGMEMYH9CUrFO7CfLJpaD7UR85wVMZ0W_LeF44f8&start_radio=1"
+              class="text-[#222] hover:text-[#ff9000] transition-all">
+              Youtube
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.linkedin.com/feed/" 
+              class="text-[#222] hover:text-[#ff9000] transition-all">
+              Linkedin
+            </a>
+          </li>
         </ul>
       </div>
 
@@ -30,7 +51,7 @@
         <div class="footer-title">Store</div>
         <div class="footer-store">
           <div>
-            <b>123 Lý Thường Kiệt, Phường 3, Quận 10, Thành phố Hồ Chí Minh</b>
+            123 Lý Thường Kiệt, Phường 3, Quận 10, Thành phố Hồ Chí Minh
           </div>
           <div>+84 123 456 789</div>
           <div>wearepet@petshop.com</div>
@@ -42,18 +63,9 @@
     <div class="footer-bottom">
       <div class="footer-copyright">© Copyright Pet World 2025</div>
       <div class="footer-payments">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png"
-          alt="VISA"
-        />
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png"
-          alt="MasterCard"
-        />
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg"
-          alt="PayPal"
-        />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="VISA" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" alt="MasterCard" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" />
       </div>
     </div>
 
@@ -81,6 +93,7 @@
   padding: 48px 0 0 0;
   overflow: hidden;
 }
+
 .footer-content {
   display: flex;
   justify-content: space-between;
@@ -90,14 +103,17 @@
   padding: 0 48px;
   gap: 32px;
 }
+
 .footer-col {
   flex: 1;
   min-width: 180px;
 }
+
 .col-logo {
   flex: 1.5;
   min-width: 260px;
 }
+
 .footer-logo {
   display: flex;
   align-items: center;
@@ -106,31 +122,37 @@
   gap: 8px;
   margin-bottom: 16px;
 }
+
 .footer-logo i {
   font-size: 32px;
   color: #222;
 }
+
 .footer-desc {
   font-size: 1.25rem;
   color: #222;
   margin-bottom: 32px;
 }
+
 .footer-copyright {
   color: #888;
   font-size: 1rem;
   margin-top: 32px;
 }
+
 .footer-title {
   font-size: clamp(1.1rem, 2vw, 1.25rem);
   font-weight: 700;
   margin-bottom: 16px;
   color: #222;
 }
+
 .footer-col ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
+
 .footer-col li {
   font-size: 1.125rem;
   color: #222;
@@ -138,14 +160,17 @@
   cursor: pointer;
   transition: color 0.2s;
 }
+
 .footer-col li:hover {
   color: #ff9000;
 }
+
 .footer-store {
   font-size: 1.125rem;
   color: #222;
   margin-top: 8px;
 }
+
 .footer-bottom {
   display: flex;
   justify-content: space-between;
@@ -155,22 +180,26 @@
   padding: 0 48px 24px 48px;
   gap: 16px;
 }
+
 .footer-payments {
   display: flex;
   align-items: center;
   gap: 16px;
 }
+
 .footer-payments img {
   height: 24px;
   filter: grayscale(1) contrast(0.8);
   opacity: 0.8;
   object-fit: contain;
 }
+
 .footer-copyright {
   color: #888;
   font-size: 1rem;
   margin: 0;
 }
+
 /* Dấu chân mờ trang trí */
 .footer-paws {
   position: absolute;
@@ -181,6 +210,7 @@
   pointer-events: none;
   z-index: 0;
 }
+
 .paw {
   position: absolute;
   color: #e6e6e6;
@@ -188,32 +218,39 @@
   opacity: 0.35;
   user-select: none;
 }
+
 .paw1 {
   left: 18%;
   top: 18%;
   transform: rotate(-10deg);
 }
+
 .paw2 {
   left: 38%;
   top: 8%;
   font-size: 2.5rem;
 }
+
 .paw3 {
   left: 55%;
   top: 22%;
   font-size: 3rem;
 }
+
 .paw4 {
   left: 30%;
   top: 55%;
   font-size: 2.25rem;
 }
+
 .paw5 {
   left: 60%;
   top: 60%;
   font-size: 2.75rem;
 }
+
 @media (max-width: 900px) {
+
   .footer-content,
   .footer-bottom {
     flex-direction: column;
@@ -221,9 +258,11 @@
     padding: 0 16px;
     gap: 16px;
   }
+
   .footer-content {
     gap: 24px;
   }
+
   .footer-payments img {
     margin-left: 16px;
     height: 24px;
@@ -317,6 +356,7 @@
 
 /* Improve touch targets for mobile */
 @media (hover: none) {
+
   .footer-section a,
   .social-links a {
     min-height: 44px;
