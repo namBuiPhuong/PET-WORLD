@@ -6,10 +6,8 @@ class ProductService
 {
     private $productModel;
 
-    public function __construct()
+    public function __construct($db)
     {
-        $database = new Database();
-        $db = $database->getConnection();
         $this->productModel = new Product($db);
     }
 

@@ -5,9 +5,9 @@ class ProductController
 {
     private $service;
 
-    public function __construct()
+    public function __construct($db)
     {
-        $this->service = new ProductService();
+        $this->service = new ProductService($db);
     }
 
 

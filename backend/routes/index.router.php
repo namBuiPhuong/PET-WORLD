@@ -19,7 +19,9 @@ class Router
         $origin = isset($_SERVER['HTTP_ORIGIN']) ? $_SERVER['HTTP_ORIGIN'] : '';
         $allowed_origins = [
             'http://localhost:8080',
+            'http://localhost:8081',
             'http://127.0.0.1:8080',
+            'http://127.0.0.1:8081',
             'https://9ad9-116-110-40-129.ngrok-free.app'
         ];
         if (in_array($origin, $allowed_origins)) {

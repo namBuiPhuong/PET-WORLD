@@ -73,6 +73,7 @@ import { stores } from '@/data/store'
 /* Thêm CSS layout cơ bản, bạn có thể tuỳ chỉnh thêm */
 .homepage {
   background: #fafafa;
+  padding-top: 32px;
 }
 
 .header-bar {
@@ -135,9 +136,8 @@ import { stores } from '@/data/store'
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 40px;
-  margin-top: 32px;
-  min-height: 420px;
+  margin: 0 40px 40px;
+  min-height: 450px;
   position: relative;
   z-index: 1;
   background: #fff;
@@ -241,6 +241,7 @@ import { stores } from '@/data/store'
 }
 
 .paw-prints {
+  display: none;
   position: absolute;
   right: 80px;
   top: 80px;

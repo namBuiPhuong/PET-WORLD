@@ -49,7 +49,7 @@ function goToPet(petType) {
 .quick-category:hover {
   transform: scale(1.02);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-  border: 2px solid #ff9000; /* viền cam nổi bật */
+  border: 2px solid #cecece; /* viền cam nổi bật */
 }
 
 /* Ảnh bên trong phóng nhẹ */

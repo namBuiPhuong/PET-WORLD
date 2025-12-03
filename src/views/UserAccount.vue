@@ -1919,6 +1919,16 @@ input:checked + .toggle-slider:before {
   cursor: pointer;
   transition: all 0.2s;
 }
+.edit-btn {
+  background: #ff7c00;
+  border: none;
+  color: #fff;
+  padding: 8px 40px;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
 
 .cancel-btn:hover {
   background: #f5f5f5;

@@ -43,9 +43,9 @@
           <ul class="filter-list">
             <li>
               <label class="checkbox-container">
-                <input type="checkbox" value="Thuc an" v-model="selectedCategories" />
+                <input type="checkbox" value="Thức ăn" v-model="selectedCategories" />
                 <span class="checkmark"></span>
-                Thuc an
+                Thức ăn
               </label>
             </li>
             <li>

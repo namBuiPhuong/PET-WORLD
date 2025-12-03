@@ -114,7 +114,8 @@ header {
   align-items: center;
   font-size: 0.875rem;
   color: #222;
-  padding: 10px 40px 0 40px;
+  padding: 10px 40px 10px 40px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 .topbar .flex-1 {
@@ -196,7 +197,7 @@ nav .flex.items-center {
 }
 
 .search-box input {
-  width: 180px;
+  width: 250px;
   padding: 8px 36px 8px 16px;
   border-radius: 999px;
   border: none;
